@@ -1,31 +1,23 @@
 Title: Engagement étudiant
 
 
-# 🤝 Engagement Étudiant
+# Engagement Étudiant
 
-## 🚒 Pompier volontaire
+## Bénévole en association
 
-En parallèle de mes études en BTS SIO, je suis **pompier volontaire** depuis 2 ans au sein du centre de secours de [VilleFictive].  
+En parallèle de mes études en BTS SIO, je suis **bénévole** dans une associtation depuis 3 ans basé dans la ville de Nangis (Seine-Et-Marne) où les actions sont effectués dans Paris.  
 
 ### Mes missions principales
-- Interventions de secours à personnes (accidents, urgences médicales).  
-- Lutte contre les incendies et protection des biens.  
-- Assistance en cas de catastrophes naturelles ou d’accidents de la route.  
-- Sensibilisation à la prévention des risques (auprès du grand public et des écoles).  
+- Distribution de nourriture et vêtements aux sans-abris
+- Action dans des foyers d'hébergement pour sans-abris, (vêtements et jeux avec les enfants)
 
 ### Compétences développées
-- **Rigueur et discipline** : respect strict des procédures de sécurité.  
-- **Gestion du stress** : réagir rapidement et efficacement en situation d’urgence.  
-- **Travail en équipe** : coordination avec d’autres pompiers, médecins, gendarmes.  
-- **Sens du service** : engagement au profit des autres et esprit de solidarité.  
-- **Organisation** : concilier études exigeantes et disponibilité opérationnelle.  
+- **Sens de l’écoute et de l’empathie** : Comprendre et aider des personnes en situation difficile.
+- **Organisation** : Aide dans l'organisation et la mise en place des actions
+- **Communication** : Discuter et apprendre des personnes ayant un parcours différent du nôtre
 
 ### Ce que cela m’apporte dans mes études
-Être pompier volontaire m’aide à développer des **qualités humaines et professionnelles** utiles en informatique :  
+Être bénévole m’aide à développer des **qualités humaines et professionnelles** utiles en informatique :  
 - La gestion des priorités et des imprévus.  
-- La capacité à travailler en **mode projet**, comme lors d’une intervention.  
-- L’esprit d’entraide et la communication claire, essentiels dans une équipe informatique.  
+- La capacité à travailler en projet
 
----
-
-📌 *Mon engagement de pompier volontaire illustre ma motivation à mettre mes compétences au service des autres, que ce soit dans le cadre d’interventions d’urgence ou dans mes projets informatiques.*  

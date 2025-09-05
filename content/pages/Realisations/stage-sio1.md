@@ -16,6 +16,7 @@ Le service système d'information et numérique dans lequel j'ai effectué mon s
 
 
 <img src="../../../images/formulaire1.jpg">
+
 # Missions & tâches réalisés : 
 
 **1 Principaux problèmes rencontrés** <br>
