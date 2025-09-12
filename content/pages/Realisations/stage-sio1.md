@@ -14,9 +14,6 @@ Title: Stage SIO1
 # Présentation de l'entreprise/société : 
 Le service système d'information et numérique dans lequel j'ai effectué mon stage créer des outils en interne pour aider les employés d'autre service, par exemple pour aider à la gestion des cantines en collège ou des outils plus spécifiques au besoin des autres employé
 
-
-<img src="../../../images/formulaire1.jpg">
-
 # Missions & tâches réalisés : 
 
 **1 Principaux problèmes rencontrés** <br>
@@ -50,3 +47,13 @@ La suite du projet concernant PHP et les bases de données ma permit d’être p
 J’ai pu découvrir et utiliser les outils de travails présents dans le service, notamment les machines virtuelles avec WALLIX, les outils de communications avec ZOOM ou encore les outils de collaboration pour partager son travail avec GitLab.
 De plus cela m’a introduit à l’installation et l’utilisation de XAMPP pour me permettre d’utiliser PHP et MySQL.
 
+<img src="../images/formulaire1.jpg" width="300" />
+<br>
+<br>
+<img src="../images/formulaire2.1.jpg" width="100" />
+<img src="../images/formulaire2.2.jpg" width="100" />
+<img src="../images/formulaire2.3.jpg" width="100" />
+<img src="../images/formulaire2.4.jpg" width="100" />
+<img src="../images/formulaire2.5.jpg" width="100" />
+<img src="../images/formulaire2.6.jpg" width="100" />
+<img src="../images/formulaire2.7.jpg" width="100" />
