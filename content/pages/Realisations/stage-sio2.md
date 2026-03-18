@@ -82,4 +82,4 @@ J’ai ensuite transmis ces informations à l’équipe chargée du réseau du S
 
 Après ces ajustements, l’envoi des e-mails de résultats a pu fonctionner correctement.
 
-<img src="../images/formulaire1.jpg" width="300">
+<img src="../images/image a mettre.jpg" width="300">

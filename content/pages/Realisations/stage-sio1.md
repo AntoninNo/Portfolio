@@ -16,6 +16,8 @@ Le service système d'information et numérique dans lequel j'ai effectué mon s
 
 # Missions & tâches réalisés : 
 
+La tache réalisés consistait a un formulaire généré depuis une base de données pour ensuite re rentré les données dans cette base.
+
 **1 Principaux problèmes rencontrés** <br>
 **1.1 Méthodologie dans la base de données** <br>
 Premier problème concernant les bases de données au niveau méthodologique, j’ai rentré le contenu HTML directement dans la base de données et je le générais comme ça dans mon fichier.
