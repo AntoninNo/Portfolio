@@ -5,7 +5,7 @@ Title: Engagement étudiant
 
 ## Bénévole en association
 
-En parallèle de mes études en BTS SIO, je suis **bénévole** dans une associtation depuis 3 ans basé dans la ville de Nangis (Seine-Et-Marne) où les actions sont effectués dans Paris.  
+En parallèle de mes études en BTS SIO, je suis bénévole dans une associtation depuis 3 ans basé dans la ville de Nangis (Seine-Et-Marne) où les actions sont effectués dans Paris.  
 
 ### Mes missions principales
 - Distribution de nourriture et vêtements aux sans-abris
