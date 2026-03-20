@@ -1,122 +1,129 @@
+
 /*
 ______________________________________________
-    DEFINITIONS DES CONSTANTES DE STYLES 
+
+	DEFINITIONS DES CONSTANTES DE STYLES 
 ______________________________________________
 */
+
 :root {
-    --color-bg:          #f7f7f5;
-    --color-surface:     #ffffff;
-    --color-border:      #e2e2de;
-    --color-text:        #1a1a1a;
-    --color-text-muted:  #6b6b6b;
-    --color-accent:      #2d6a4f;      /* vert forêt discret */
-    --color-accent-soft: #e8f0eb;
 
-    --nav-bg:            #1c1c1c;
-    --nav-link:          #c8c8c8;
-    --nav-link-hover:    #ffffff;
-    --nav-link-active:   #ffffff;
+    /*
+    Style sur les polices :
+    -----------------------
+    */
+    /* --typo-generale: 'Fira Sans', 'Open Sans'; */
 
-    --radius:            4px;
-    --transition:        0.2s ease;
+    /* Polices titres & sous-titre : */
+    /* --typo-titres:  'Kanit', 'Exo 2'; */
+
+
+    /*
+    Style sur les couleurs :
+    ------------------------
+    */
+
+    /* --navbar-brand-couleur: rgb(255, 166, 0); */
+    --nav-link: white;
+    --nav-link-active: rgb(255, 209, 5);
+
+
+    /* Redéfinition des couleurs de Bootstrap :*/
+    /* --bs-warning: rgb(255, 166,  0);
+    --bs-warning-rgb: 255, 166, 0;
+
+    --bs-warning-bg-subtle: rgb(250, 240, 100);
+    --bs-warning-border-subtle: rgb(250, 240, 100); */
+
 }
 
+
+
 /*
-------------------------------------------------
-    PROPRIETES GENERALES
-------------------------------------------------
+________________________________________________
+
+	DEFINITION DES PROPRIETES DES CLASSES CSS
+________________________________________________
 */
 
-body {
-    background-color: var(--color-bg);
-    background-image: none;
-    color: var(--color-text);
-    font-size: 1rem;
-    line-height: 1.65;
-}
+/*
+----------------------
+PROPRIETES GENERALES :
+----------------------
+*/
 
 /*
-------------------------------------------------
-    HEADER
-------------------------------------------------
+Définition du fond :
+--------------------
+*/
+body {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.95));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /*contain*/ 
+    background-attachment: fixed;
+  }
+
+
+  /*
+PROPRIETES SUR LE HEADER & NAVBAR :
+-----------------------------------
+*/
+
+/*
+Définition du fond du header :
+------------------------------
 */
 
 .background-header {
-    background-color: var(--color-surface);
-    background-image: none;
-    border-bottom: 1px solid var(--color-border);
-}
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.95)), url('../backgrounds/header_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /*contain*/ 
+  }
 
 /*
-------------------------------------------------
-    NAVBAR
-------------------------------------------------
+Couleur des éléments de navigations :
+-------------------------------------
 */
 
 .navbar {
-    background-color: var(--nav-bg) !important;
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8em;
 }
 
 .nav-link-icon {
-    font-size: 1.25em;
-    opacity: 0.7;
+    font-size: 1.5em;
 }
 
 .nav-link {
     color: var(--nav-link);
-    transition: color var(--transition);
-    padding-block: 0.25rem;
 }
 
-.nav-link:hover {
-    color: var(--nav-link-hover);
+.nav-link:hover, .dropdown-item:hover {
+    color: var(--bs-warning);
 }
 
 .nav-link:active {
-    color: var(--nav-link-active);
+    color: black;
 }
+
 
 .navbar-nav .nav-item .active {
     color: var(--nav-link-active);
-    border-bottom: 2px solid var(--color-accent);
-}
+  }
 
-/* Dropdown */
-.dropdown-menu {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    padding: 0.35rem 0;
-}
 
 .dropdown-item {
-    font-weight: 500;
-    color: var(--color-text);
-    font-size: 0.82rem;
-    transition: background-color var(--transition), color var(--transition);
-}
-
-.dropdown-item:hover {
-    background-color: var(--color-accent-soft);
-    color: var(--color-accent);
+    font-weight: bold;
+    color: black;
 }
 
 .dropdown-item:active {
-    background-color: var(--color-accent);
-    color: #ffffff;
+    background-color: var(--navbar-brand-couleur);
+    color: white;
 }
 
-/* Burger */
+
 .navbar-toggler {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: var(--radius);
-    transition: border-color var(--transition);
-}
-
-.navbar-toggler:hover {
-    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
 }
