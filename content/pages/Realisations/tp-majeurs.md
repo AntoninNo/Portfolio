@@ -1,9 +1,9 @@
 Title: TP majeurs
 
-# Présentation des travaux pratiques ou mini-projets :
+# Présentation des travaux pratiques ou mini-projets : 
 
 
-## Première année de BTS SIO :
+## Première année de BTS SIO : 
 
 
 ## Seconde année de BTS SIO :
