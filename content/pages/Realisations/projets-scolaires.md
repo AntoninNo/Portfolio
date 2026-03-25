@@ -1,10 +1,19 @@
 Title: Projets scolaires
 
 
-Voici quelques projets réalisés durant mes deux années :
+Voici quelques projets réalisés durant ma première année :
 
-- Application de gestion de stages en Python/Django
-- API REST de gestion de séries avec Spring Boot
-- Portfolio personnel avec Pelican
-- 
--
+- Géoworld
+<!-- Insérer photo -->
+
+- Film 
+<!-- Insérer photo -->
+
+Pour la seconde année voici les projets réalisés :
+
+- E-commerce 
+<!-- Insérer photo -->
+
+- Savon app 
+<!-- Insérer photo -->
+
