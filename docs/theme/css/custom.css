@@ -1,129 +1,451 @@
+/*
+______________________________________________
+    IMPORTS DE POLICES
+______________________________________________
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
 /*
 ______________________________________________
-
-	DEFINITIONS DES CONSTANTES DE STYLES 
+    DÉFINITIONS DES CONSTANTES DE STYLES
 ______________________________________________
 */
-
 :root {
+    /* Typographie */
+    --typo-generale: 'DM Sans', sans-serif;
+    --typo-titres: 'Cormorant Garamond', Georgia, serif;
 
-    /*
-    Style sur les polices :
-    -----------------------
-    */
-    /* --typo-generale: 'Fira Sans', 'Open Sans'; */
+    /* Palette */
+    --couleur-fond: #0e0f13;
+    --couleur-surface: #16181f;
+    --couleur-bordure: rgba(255, 255, 255, 0.07);
+    --couleur-or: #c9a84c;
+    --couleur-or-clair: #f0d080;
+    --couleur-texte: #e8e6e1;
+    --couleur-texte-faible: #8a8680;
 
-    /* Polices titres & sous-titre : */
-    /* --typo-titres:  'Kanit', 'Exo 2'; */
+    /* Navigation */
+    --nav-link: rgba(232, 230, 225, 0.85);
+    --nav-link-active: #c9a84c;
+    --nav-hauteur: 68px;
 
+    /* Ombres & effets */
+    --ombre-douce: 0 4px 24px rgba(0, 0, 0, 0.45);
+    --ombre-forte: 0 8px 48px rgba(0, 0, 0, 0.65);
+    --rayon: 6px;
 
-    /*
-    Style sur les couleurs :
-    ------------------------
-    */
+    /* Transitions */
+    --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* --navbar-brand-couleur: rgb(255, 166, 0); */
-    --nav-link: white;
-    --nav-link-active: rgb(255, 209, 5);
-
-
-    /* Redéfinition des couleurs de Bootstrap :*/
-    /* --bs-warning: rgb(255, 166,  0);
-    --bs-warning-rgb: 255, 166, 0;
-
-    --bs-warning-bg-subtle: rgb(250, 240, 100);
-    --bs-warning-border-subtle: rgb(250, 240, 100); */
-
+    /* Redéfinition Bootstrap */
+    --bs-warning: #c9a84c;
+    --bs-warning-rgb: 201, 168, 76;
+    --bs-warning-bg-subtle: rgba(201, 168, 76, 0.12);
+    --bs-warning-border-subtle: rgba(201, 168, 76, 0.3);
+    --bs-body-font-family: var(--typo-generale);
+    --bs-body-color: var(--couleur-texte);
+    --bs-body-bg: var(--couleur-fond);
 }
 
-
-
 /*
 ________________________________________________
-
-	DEFINITION DES PROPRIETES DES CLASSES CSS
+    BASE GLOBALE
 ________________________________________________
 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-/*
-----------------------
-PROPRIETES GENERALES :
-----------------------
-*/
+html {
+    scroll-behavior: smooth;
+}
 
-/*
-Définition du fond :
---------------------
-*/
 body {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.95));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /*contain*/ 
+    font-family: var(--typo-generale);
+    font-weight: 300;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+
+    /* Fond texturé : grain subtil + dégradé directionnel */
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"),
+        linear-gradient(160deg, #13141a 0%, #0a0b0e 55%, #111217 100%);
     background-attachment: fixed;
-  }
+    background-size: 300px 300px, cover;
 
+    min-height: 100vh;
+    letter-spacing: 0.01em;
+    line-height: 1.65;
 
-  /*
-PROPRIETES SUR LE HEADER & NAVBAR :
------------------------------------
-*/
+    /* Animation d'entrée de page */
+    animation: pageReveal 0.6s ease both;
+}
+
+@keyframes pageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--typo-titres);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: var(--couleur-texte);
+}
+
+/* Sélection de texte */
+::selection {
+    background-color: rgba(201, 168, 76, 0.25);
+    color: var(--couleur-or-clair);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--couleur-fond);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(201, 168, 76, 0.35);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--couleur-or);
+}
 
 /*
-Définition du fond du header :
-------------------------------
+________________________________________________
+    HEADER & BACKGROUND
+________________________________________________
 */
-
 .background-header {
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.95)), url('../backgrounds/header_background.png');
-    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(180deg,
+            rgba(14, 15, 19, 0.0) 0%,
+            rgba(14, 15, 19, 0.55) 60%,
+            rgba(14, 15, 19, 1.0) 100%),
+        url('../backgrounds/header_background.png');
+    background-position: center 30%;
     background-repeat: no-repeat;
-    background-size: cover; /*contain*/ 
-  }
+    background-size: cover;
+
+    /* Ligne dorée en bas du header */
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.background-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--couleur-or) 50%,
+            transparent 100%);
+    opacity: 0.5;
+}
 
 /*
-Couleur des éléments de navigations :
--------------------------------------
+________________________________________________
+    NAVBAR
+________________________________________________
 */
-
 .navbar {
-    font-size: 0.8em;
+    font-family: var(--typo-generale);
+    font-size: 0.78em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    height: var(--nav-hauteur);
+
+    background: linear-gradient(180deg,
+            rgba(10, 11, 14, 0.95) 0%,
+            rgba(10, 11, 14, 0.75) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid var(--couleur-bordure);
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.5);
+
+    transition: background var(--transition), box-shadow var(--transition);
 }
 
-.nav-link-icon {
-    font-size: 1.5em;
+/* Ligne dorée sous la navbar */
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(201, 168, 76, 0.4) 50%,
+            transparent 100%);
 }
 
+/* Brand / Logo */
+.navbar-brand {
+    font-family: var(--typo-titres);
+    font-size: 1.55em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--couleur-or) !important;
+    transition: color var(--transition), text-shadow var(--transition);
+}
+
+.navbar-brand:hover {
+    color: var(--couleur-or-clair) !important;
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+}
+
+/* Liens de navigation */
 .nav-link {
-    color: var(--nav-link);
+    color: var(--nav-link) !important;
+    padding: 0.4em 0.9em !important;
+    position: relative;
+    transition: color var(--transition);
 }
 
-.nav-link:hover, .dropdown-item:hover {
-    color: var(--bs-warning);
+/* Soulignement doré animé */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--couleur-or);
+    transition: width var(--transition), left var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 80%;
+    left: 10%;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--couleur-or-clair) !important;
 }
 
 .nav-link:active {
-    color: black;
+    color: var(--couleur-or) !important;
 }
 
-
+/* Lien actif */
 .navbar-nav .nav-item .active {
-    color: var(--nav-link-active);
-  }
+    color: var(--nav-link-active) !important;
+    font-weight: 500;
+}
 
+.navbar-nav .nav-item .active::after {
+    width: 80%;
+    left: 10%;
+}
+
+/* Icônes de navigation */
+.nav-link-icon {
+    font-size: 1.3em;
+    transition: transform var(--transition), color var(--transition);
+}
+
+.nav-link:hover .nav-link-icon {
+    transform: translateY(-2px);
+    color: var(--couleur-or-clair) !important;
+}
+
+/*
+________________________________________________
+    DROPDOWN
+________________________________________________
+*/
+.dropdown-menu {
+    background: #1a1c23;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre-forte);
+    padding: 0.5rem 0;
+    margin-top: 6px !important;
+
+    animation: dropdownReveal 0.2s ease both;
+}
+
+@keyframes dropdownReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .dropdown-item {
-    font-weight: bold;
-    color: black;
+    font-family: var(--typo-generale);
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    color: #1a1c23 !important;
+    /* texte clair forcé, sans héritage Bootstrap */
+    background-color: transparent !important;
+    padding: 0.55rem 1.2rem;
+    transition: background var(--transition), color var(--transition), padding-left var(--transition);
+    position: relative;
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--couleur-or);
+    transform: scaleY(0);
+    transition: transform var(--transition);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(201, 168, 76, 0.12) !important;
+    color: var(--couleur-or-clair) !important;
+    padding-left: 1.5rem;
+}
+
+.dropdown-item:hover::before,
+.dropdown-item:focus::before {
+    transform: scaleY(1);
 }
 
 .dropdown-item:active {
-    background-color: var(--navbar-brand-couleur);
-    color: white;
+    background-color: rgba(201, 168, 76, 0.22) !important;
+    color: var(--couleur-or) !important;
 }
 
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 0.3rem 0;
+}
 
+/*
+________________________________________________
+    TOGGLER MOBILE
+________________________________________________
+*/
 .navbar-toggler {
-    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    background: rgba(255, 255, 255, 0.04) !important;
+    padding: 0.35rem 0.65rem;
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.navbar-toggler:hover {
+    background: rgba(201, 168, 76, 0.12) !important;
+    border-color: rgba(201, 168, 76, 0.4);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(0.85) sepia(0.3) hue-rotate(2deg) saturate(0.9);
+}
+
+/*
+________________________________________________
+    UTILITAIRES GÉNÉRAUX
+________________________________________________
+*/
+
+/* Séparateur doré */
+.divider-or {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--couleur-or) 50%,
+            transparent 100%);
+    opacity: 0.35;
+    margin: 2rem 0;
+}
+
+/* Cartes */
+.card {
+    background: var(--couleur-surface);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre-douce);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ombre-forte);
+    border-color: rgba(201, 168, 76, 0.25);
+}
+
+/* Boutons */
+.btn-warning,
+.btn-or {
+    background: var(--couleur-or);
+    border-color: var(--couleur-or);
+    color: #0e0f13;
+    font-family: var(--typo-generale);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border-radius: var(--rayon);
+    transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.btn-warning:hover,
+.btn-or:hover {
+    background: var(--couleur-or-clair);
+    border-color: var(--couleur-or-clair);
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+/* Liens */
+a {
+    color: var(--couleur-or);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--couleur-or-clair);
 }
